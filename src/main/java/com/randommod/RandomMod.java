@@ -2,6 +2,7 @@ package com.randommod;
 
 import com.randommod.Item.ModItemGroups;
 import com.randommod.block.ModBlocks;
+import com.randommod.commands.ModCommands;
 import com.randommod.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import com.randommod.Item.ModItems;
@@ -26,14 +27,15 @@ public class RandomMod implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
+		ModCommands.registerCommands();
 
+		ModBlocks.registerModBlocks();
 
 		ModItemGroups.registerItemGroups();
 		ModWorldGeneration.generateModWorldGen();
 
 
 		ModItems.registerModItems();
-		ModBlocks.registerModBlocks();
 
 		//ModFlammableBlockRegistry.registerFlammableBlocks();
 	}

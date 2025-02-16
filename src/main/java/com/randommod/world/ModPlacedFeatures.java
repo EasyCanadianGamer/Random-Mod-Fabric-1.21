@@ -20,8 +20,8 @@ public class ModPlacedFeatures {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, RANDOMITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RANDOMITE_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(2,
-                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-4), YOffset.fixed(-64))));
+                ModOrePlacement.modifiersWithCount(9,
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(20), YOffset.fixed(-64))));
 
     }
 
